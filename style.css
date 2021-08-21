@@ -1,0 +1,26 @@
+body,
+input {
+	background-color: black;
+	color: white;
+	font-size: 1.5rem;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	margin: auto;
+	width: 85%;
+	padding: 24px;
+}
+
+input {
+	border: 2px blue solid;
+	border-radius: 6px;
+}
+
+button {
+	width: 100%;
+	border-radius: 10px;
+	background-color: blue;
+	color: white;
+	font-size: 2rem;
+}
