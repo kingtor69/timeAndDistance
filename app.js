@@ -4,7 +4,7 @@ for (const [key, value] of queryString) {
     queryData[key] = value;
 };
 
-if (keys(queryData).length < 1) {
+if (Object.keys(queryData).length < 1) {
     // if queryString is empty, check for current data from localStorage 
     if ('queryData' in localStorage) {
         queryData = localStorage.queryData;
