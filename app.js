@@ -1,3 +1,20 @@
+const queryString = new URLSearchParams(window.location.search);
+const queryData = {};
+for (const [key, value] of queryString) {
+    queryData[key] = value;
+};
+
+if (keys(queryData).length < 1) {
+    // if queryString is empty, check for current data from localStorage 
+    if ('queryData' in localStorage) {
+        queryData = localStorage.queryData;
+    };
+} else {
+    // if not, replace localStorage with queryString data
+    localStorage.removeItem('queryData');
+    localStorage.setItem('queryData', JSON.stringify(queryData));
+};
+
 // const solveButt = document.querySelector('#solve');
 const form = document.querySelector('form');
 // const inputDistance = document.querySelector('#input-distance');
